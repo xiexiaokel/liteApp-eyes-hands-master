@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<scroll-view class="container" scroll-y>
+  <view class="full-banner">
+    <view class="banner-title">
+      <view class="title-content">
+        <view class="game-rule flex flex-center flex-row">
+          <text class="ft40 textCoffe rule-center">今日挑战：8秒</text>
+          <text class="ft30 textCoffe rule-btn" bindtap="showModal">规则</text>
+        </view>
+        <image src="{{imgTitle}}" class="img-title"></image>
+        <text class="fight-num ft30 textRed">当前共有{{fight_num}}次参加</text>
+      </view>
+    </view>
+    <button class="fight-btn textWhite" bindtap="fightStart">开始挑战</button>
+    <button class="invited" bindtap="invitedFriend">
+      <image src="{{imgInvited}}" class="img-invited"></image>
+      <text class="ft36 textWhite">约朋友一起来挑战</text>
+    </button>
+  </view>
+  <view class="honor">
+    <view class="pd-all tab-bar">
+      <tabBar binditemCheck="tabCheck" tabTitleList="{{tabTitleList}}"></tabBar>
+    </view>
+    <view class="adv-box">
+      <image src="{{imgAdv}}" class="adv-img"></image>
+    </view>
+    <view class="tab-content">
+      <block wx:if="{{tabShow==0}}">
+        <memberList orderBy="prizeNumber"></memberList>
+      </block>
+      <block wx:if="{{tabShow==1}}">
+        <memberList orderBy="fightNumber"></memberList>
+      </block>
+      <block wx:if="{{tabShow==2}}">
+        <view class="prize-get">
+          <view class="prize-top flex flex-row flex-center flex-between">
+            <text class="ft32 textWhite">挑战成功领取奖品，包邮！</text>
+            <button class="prize-btn ft30 textWhite" bindtap="getPrize">立即领取</button>
+          </view>
+          <view class="prize-bot bg-white flex flex-center flex-row">
+            <image src="{{safeIcon}}" class="safe-icon"></image>
+            <text class="ft32 textGreen flex flex-row flex-center">平台担保，所有商品100%真实领取</text>
+          </view>
+        </view>
+        <view class="marquee-container">
+          <marquee marqueeList="{{marqueeList}}" interval="{{interval}}" duration="{{duration}}"></marquee>
+        </view>
+        <pictureList goodsList="{{goodsList}}"></pictureList>
+      </block>
+    </view>
+  </view>
+  <!-- 大弹窗 -->
+  <popModal showModal="{{showModal}}" height="880">
+    <!-- 写入弹窗内容 -->
+    <view class="modal-text">
+      <view class="text-item">
+        <text class="text-icon pink">1</text>
+        <text class="ft28 textBlack">登陆自动获得一次挑战机会，每天可以分享
+到10个不同的群，获得10次免费机会。</text>
+      </view>
+      <view class="text-item">
+        <text class="text-icon blue">2</text>
+        <text class="ft28 textBlack">由于微信版本更新，可能导致小程序的某些
+功能出现异常，请退出微信后重新打开。</text>
+      </view>
+      <view class="text-item">
+        <text class="text-icon pink">3</text>
+        <text class="ft28 textBlack">挑战过程中答题时间会随着挑战进行而缩短。</text>
+      </view>
+      <view class="text-item">
+        <text class="text-icon blue">4</text>
+        <text class="ft28 textBlack">挑战过程中,在规定时间内连续判断对40道简
+单的数字加减题，挑战成功。</text>
+      </view>
+      <view class="text-item">
+        <text class="text-icon pink">5</text>
+        <text class="ft28 textBlack">挑战过程后，您可以免费挑选娃娃（如果挑
+选的娃娃缺货，讲随机发货），填写领取信
+息，客服按照申请顺序发货，娃娃包邮！</text>
+      </view>
+      <text class="ft36 textRed">如需了解详情请联系客服</text>
+      <button class="red-btn" bindtap="relationClick">立即联系</button>
+    </view>
+  </popModal>
+  <!-- 开始挑战小弹窗 -->
+  <popModal showModal="{{showPop}}" height="300">
+    <!-- 弹窗内容 -->
+    <view class="fight-pop">
+      <image src="{{popHead}}" class="pop-head"></image>
+      <button class="invited-btn" bindtap="invitedFriend">
+        <text class="ft36">邀请好友一起来挑战</text>
+        <text class="ft56">免费</text>
+      </button>
+    </view>
+  </popModal>
+  <!-- 底部导航 -->
+  <botNav page="home"></botNav>
+</scroll-view>

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/fighting/fighting",
+    "pages/prize/prize",
+    "pages/address/address",
+    "pages/complanit/complanit",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ea6c53",
+    "navigationBarTitleText": "眼疾手快",
+    "navigationBarTextStyle": "light"
+  }
+}
