@@ -11,10 +11,10 @@
         <text class="fight-num ft30 textRed">当前共有{{fight_num}}次参加</text>
       </view>
     </view>
-    <button class="fight-btn textWhite" bindtap="fightStart">开始挑战</button>
+    <view class="fight-btn textWhite" bindtap="fightStart"></view>
     <button class="invited" bindtap="invitedFriend">
       <image src="{{imgInvited}}" class="img-invited"></image>
-      <text class="ft36 textWhite">约朋友一起来挑战</text>
+      <text class="ft36 textWhite">点击转发到群，挑战机会+1</text>
     </button>
   </view>
   <view class="honor">
@@ -88,7 +88,7 @@
     <view class="fight-pop">
       <image src="{{popHead}}" class="pop-head"></image>
       <button class="invited-btn" bindtap="invitedFriend">
-        <text class="ft36">邀请好友一起来挑战</text>
+        <text class="ft36">分享群挑战机会+1</text>
         <text class="ft56">免费</text>
       </button>
     </view>

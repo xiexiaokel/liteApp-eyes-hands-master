@@ -9,7 +9,7 @@ page{
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  background:rgba(182,146,217,0.12);
+  /* background:rgba(182,146,217,0.12); */
 } 
 /* flex布局公共样式*/
 .flex{
