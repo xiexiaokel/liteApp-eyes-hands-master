@@ -5,7 +5,7 @@
   left:0;
   bottom:0;
   width:100%;
-  background:#f3edf9;
+  background:#faeeaf;
   border-top:1px #e0d8e8 solid;
   align-items: center;
   height:106rpx;

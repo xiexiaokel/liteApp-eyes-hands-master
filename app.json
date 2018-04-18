@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/fighting/fighting",
-    "pages/prize/prize",
+    "pages/mine/mine",
     "pages/address/address",
-    "pages/complanit/complanit",
-    "pages/mine/mine"
+    "pages/prize/prize",
+    "pages/complanit/complanit"
   ],
   "window": {
     "backgroundTextStyle": "light",

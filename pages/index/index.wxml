@@ -26,10 +26,10 @@
     </view>
     <view class="tab-content">
       <block wx:if="{{tabShow==0}}">
-        <memberList orderBy="prizeNumber"></memberList>
+        <memberList orderBy="prizeNumber" memberList="{{memberList}}"></memberList>
       </block>
       <block wx:if="{{tabShow==1}}">
-        <memberList orderBy="fightNumber"></memberList>
+        <memberList orderBy="fightNumber" memberList="{{memberList}}"></memberList>
       </block>
       <block wx:if="{{tabShow==2}}">
         <view class="prize-get">

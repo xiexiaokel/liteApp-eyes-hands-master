@@ -1,6 +1,6 @@
 /* pages/prize/prize.wxss */
 .prize-tab{
-  background:#4b2ec8;
+  background:#ea6c53;
 }
 .tab-item{
   display:flex;
@@ -10,7 +10,7 @@
   height:90rpx;
 }
 .default{
-  color:#dad1ff;
+  color:#ffddd6;
   height:66rpx;
   line-height: 66rpx;
    border-radius: 33rpx;
@@ -18,7 +18,7 @@
 }
 .active{
   background:#fff;
-  color:#4b2ec8;
+  color:#ea6c53;
 }
 .list-content{
   padding:0 30rpx;

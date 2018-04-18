@@ -17,8 +17,8 @@ Page({
     showPop: false,//控制开始按钮小弹窗显示
     tabTitleList: [//tab分类
       { key: "prize", text: '奖品列表', checked: true },
-      { key: "honor", text: '荣誉榜', checked: false },
-      { key: "will", text: '毅力榜', checked: false }
+      { key: "honor", text: '手速榜', checked: false },
+      { key: "will", text: '群内手速', checked: false }
     ],
     marqueeList:
     [{ id: '1', goods: 'YSL圣罗兰方管正红色52', nickName: '小灰灰', time: '2018-04-12 15:34' },
@@ -30,10 +30,36 @@ Page({
     ],//跑马灯数据列表
     interval: '3000',//跑马灯间隔时间
     duration: '500',//跑马灯滑动时间,
-    goodsList:[
-      { id: '1', name:'YSL圣罗兰方管正红色52', price:'300',surplus:'3',limit:'3',picture:`${imgHost}/images/prize.png`},
+    goodsList: [
+      { id: '1', name: 'YSL圣罗兰方管正红色52', price: '300', surplus: '3', limit: '3', picture: `${imgHost}/images/prize.png` },
       { id: '2', name: 'YSL圣罗兰方管正绿色52', price: '400', surplus: '3', limit: '3', picture: `${imgHost}/images/prize.png` }
-    ]//奖品数据
+    ],//奖品数据
+    // 排行榜数据
+    memberList: [{
+      nickName: '你大爷',
+      picture: `${imgHost}/images/head_pic.png`,
+      pepoleTime: '00′06″0',
+      groupTime: '00′13″0',
+    },
+    {
+      nickName: '你大妈',
+      picture: `${imgHost}/images/head_pic.png`,
+      pepoleTime: '00′08″0',
+      groupTime: '00′12″0',
+    },
+    {
+      nickName: '你大姨',
+      picture: `${imgHost}/images/head_pic.png`,
+      pepoleTime: '00′09″0',
+      groupTime: '00′15″0',
+    },
+    {
+      nickName: '你大舅',
+      picture: `${imgHost}/images/head_pic.png`,
+      pepoleTime: '00′10″0',
+      groupTime: '00′06″0',
+    },
+    ]
   },
   onLoad: function () {
 
@@ -53,7 +79,7 @@ Page({
   invitedFriend: function () {
     console.log('邀请朋友事件方法')
   },
-  getPrize:function(){
+  getPrize: function () {
     wx.navigateTo({
       url: '../prize/prize',
     })

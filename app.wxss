@@ -113,13 +113,16 @@ page{
   color:#9f6ae9;
 }
 .textRed{
-  color:#961601;
+  color:#ea6c53;
 }
 .textGreen{
   color:#72c900;
 }
 .textCoffe{
   color:#b05701;
+}
+.textLightYellow{
+  color:#faeeaf;
 }
 /* 字体加粗 */
 .bold{

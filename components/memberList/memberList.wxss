@@ -3,7 +3,7 @@
 .member-list{
   border-radius: 10rpx;
   padding:0 35rpx;
-  background:rgba(255,255,255,0.8);
+  background:rgba(255,255,255,0.5);
 }
 .member-item{
   display: flex;
@@ -11,7 +11,7 @@
   flex-flow: ro nowrap;
   justify-content: space-between;
   align-items: center;
-  border-bottom:1rpx #efe7f7 solid;
+  border-bottom:1rpx #fced9e solid;
 }
 .member-item:last-child{
   border:0;

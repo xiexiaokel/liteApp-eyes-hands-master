@@ -1,8 +1,9 @@
 /* pages/mine/mine.wxss */
 
 .mine{
-  height:650rpx;
-  background: linear-gradient(to bottom, #4b2ec8, #ba7df3);
+  height:720rpx;
+  /* background: linear-gradient(to bottom, #4b2ec8, #ba7df3); */
+  background:#ea6c53;
 }
 .head-pic{
   width:180rpx;
@@ -18,24 +19,25 @@
 }
 .complaint-btn{
   position: absolute;
-  right:0;
-  top:50%;
+  right:40rpx;
+ bottom:0;
   margin-top:-70rpx;
   height:70rpx;
-  width:140rpx;
-  border-top-left-radius: 35rpx;
-  border-bottom-left-radius: 35rpx;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  background:#b19aff;
-  padding-left:10rpx;
+}
+.online-btn{
+  top:50%;
 }
 .cpt-icon{
-  width:31rpx;
-  height:36rpx;
-  margin-right:10rpx;
+  width:44rpx;
+  height:47rpx;
+}
+.line-icon{
+  width:62rpx;
+  height:52rpx;
 }
 .fight-record{
   width:100%;
@@ -43,6 +45,8 @@
 }
 .record-item{
   flex:1;
+  height:180rpx;
+  border-right:1rpx #faeeaf solid;
 }
 .bottom{
   align-items: baseline;
@@ -59,6 +63,14 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  background:#faeeaf;
+}
+.times{
+  background:#ea6c53;
+  border:2rpx #faeeaf solid;
+}
+.times::after{
+  border:0;
 }
 .wx-icon{
   width:47rpx;
@@ -110,11 +122,32 @@
   line-height: 50rpx;
 }
 .item-btn{
-  background:#7e62f8;
+  background:#ea6c53;
   font-size:28rpx;
   color:#fff;
   border-radius: 40rpx;
   height:80rpx;
   line-height: 80rpx;
   margin:0;
+}
+.more-fight{
+  height:70rpx;
+  position: relative;
+  margin:15rpx 35rpx 0 35rpx;
+}
+.more-fight:before,.more-fight:after{
+  display: block;
+  content: '';
+  height:2rpx;
+  width:200rpx;
+  position: absolute;
+  top:50%;
+  margin-top:-1rpx;
+  background:#ea6c53;
+}
+.more-fight:before{
+  left:0;
+}
+.more-fight:after{
+  right:0;
 }

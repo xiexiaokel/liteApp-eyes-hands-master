@@ -11,7 +11,7 @@
       <text class="ft28 textBlack">{{item.nickName}}</text>
     </view>
   </view>
-    <text class="item-num" wx:if="{{orderBy=='prizeNumber'}}">获得娃娃{{item.prizeNum}}个</text>
-    <text class="item-num" wx:if="{{orderBy=='fightNumber'}}">挑战{{item.fightNum}}次</text>
+    <text class="item-num" wx:if="{{orderBy=='prizeNumber'}}">{{item.pepoleTime}}</text>
+    <text class="item-num" wx:if="{{orderBy=='fightNumber'}}">{{item.groupTime}}</text>
   </view>
 </view>
